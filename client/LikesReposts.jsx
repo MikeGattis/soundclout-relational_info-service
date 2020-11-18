@@ -68,7 +68,7 @@ class LikesReposts extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className={"userGrid"}>
         <h3>Likes</h3>
         <TopLikes users={this.state.likers} />
         <h3>Reposts</h3>

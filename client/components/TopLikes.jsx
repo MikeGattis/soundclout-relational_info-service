@@ -7,18 +7,13 @@ function TopLikes(props) {
   const likers = props.users;
   const topNine = [];
 
-  const styleUL = {
-    position: "absolute",
-    left: 0
-  };
-
-
   var pixels = 0;
   for (var i = 0; i < likers.length; i++) {
-    var styleLI = {
+    var styleDiv = {
       position: "absolute",
-      left: pixels + "px"
-    }
+      left: pixels + "px",
+      display: "inline-block"
+    };
     var user = likers[i];
     if (topNine.length === 9) {
       break;
@@ -26,13 +21,13 @@ function TopLikes(props) {
 
     pixels += 25;
     topNine.push(
-      <li style={styleLI}>
+      <div style={styleDiv} >
         <img src={user.user_image_url} className={"userImg"} />
         {/* <div>{user.user}</div> */}
-      </li>
+      </div>
     );
   }
-  return (<ul style={styleUL}>{topNine}</ul>)
+  return (<div  className={"likers"}>{topNine}</div>)
 }
 
 

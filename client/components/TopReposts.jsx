@@ -7,23 +7,24 @@ function TopReposts(props) {
 
   var pixels = 0;
   for (var i = 0; i < reposters.length; i++) {
-    var styleLI = {
+    var styleDiv = {
       position: "absolute",
-      left: pixels + "px"
-    }
+      left: pixels + "px",
+      display: "inline-block"
+    };
     var user = reposters[i];
     if (topNine.length === 9) {
       break;
     }
     pixels += 25;
     topNine.push(
-      <li style={styleLI}>
+      <div style={styleDiv} >
         <img src={user.user_image_url}  className={"userImg"}/>
         {/* <div>{user.user}</div> */}
-      </li>
+      </div>
     );
   }
-  return (<ul>{topNine}</ul>)
+  return (<div className={"reposters"}>{topNine}</div>)
 }
 
 export default TopReposts;
