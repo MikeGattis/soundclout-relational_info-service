@@ -12,8 +12,6 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <h1>Relational Information</h1>
-        <h3>Related Tracks</h3>
         <RelatedTracks />
         <LikesReposts />
       </div>

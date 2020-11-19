@@ -19,7 +19,7 @@ function TopLikes(props) {
       break;
     }
 
-    pixels += 25;
+    pixels += 31;
     topNine.push(
       <div style={styleDiv} >
         <img src={user.user_image_url} className={"userImg"} />
@@ -27,7 +27,13 @@ function TopLikes(props) {
       </div>
     );
   }
-  return (<div  className={"likers"}>{topNine}</div>)
+  return (
+    <div className={"likersGrid"}>
+      <h4 className={"likesHeader"}>XXXX Likes</h4>
+      <h4 className={"viewAllLikers"}>View All</h4>
+      <div className={"likers"}>{topNine}</div>
+  </div>
+  )
 }
 
 

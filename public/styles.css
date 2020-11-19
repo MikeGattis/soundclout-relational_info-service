@@ -1,20 +1,51 @@
 #app {
   position: relative;
-  display: flex;
+  display: grid;
   width: 300px;
+  /* grid-template-columns: 1fr;
+  grid-template-rows:  100px 80px 80px 80px 100px 80px 100px 80px;
+  grid-template-areas:
+  "songGrid"
+  "songGrid"
+  "songGrid"
+  "songGrid"
+  "userGrid"
+  "userGrid"
+  "userGrid"
+  "userGrid"; */
 }
 
 
 /* ========================================== Related Tracks Sections ===================================== */
 
+.relatedHeader {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 30px;
+  grid-template-areas: "related viewAllRelated";
+  align-items: center;
+}
+
+.related {
+  grid-area: related;
+
+}
+
+.viewAllRelated {
+  grid-area: viewAllRelated;
+  justify-self: right;
+}
+
 .songGrid {
+  /* grid-area: songGrid; */
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 20px 20px 20px 20px;
+  grid-template-rows: 18px 18px 18px 18px;
   grid-template-areas:
   "picture artist artist artist artist artist"
   "picture title title title title title"
-  "picture plays likes reposts comments .";
+  "picture plays likes reposts comments ."
+  ". . . . . .";
 }
 
 .songImg {
@@ -26,12 +57,18 @@
 
 .artist {
   grid-area: artist;
+  font-family: Lucida Grande, Lucida Sans Unicode, Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
+  color: #999;
+  font-size: 14px;
 }
 
 .songTitle {
   grid-area: title;
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  font-family: Lucida Grande, Lucida Sans Unicode, Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
+  font-size: 14px;
 }
 
 .statsPlays {
@@ -50,6 +87,12 @@
   grid-area: comments;
 }
 
+.songStats {
+  font-family: "Open Sans", sans-serif;
+  font-size: 11px;
+  color: #999;
+}
+
 .userImg {
   width: 35px;
   height: 35px;
@@ -59,23 +102,52 @@
   border-width: 2px;
 }
 
-/* ====================================== Likes and Reposts Sections ==================================== */
+/* ====================================== Likes Section ==================================== */
 
-.userGrid {
+.likersGrid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 20px 20px 20px 20px 20px 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 50px 50px 18px;
   grid-template-areas:
-  "likesHeader likesHeader likesHeader . likeView likeView"
-  "likesImages likesImages likesImages likesImages likesImages likesImages"
-  ". . . . . ."
-  "repostsHeader repostsHeader repostsHeader . repostsView repostsView"
-  "repostsImages repostsImages repostsImages repostsImages repostsImages repostsImages"
-  ". . . . . .";
+  "likesHeader likesHeader viewAllLikers"
+  "likesImages likesImages likesImages"
+  ". . .";
+}
+
+.likesHeader {
+  grid-area: likesHeader;
+  align-self: start;
+}
+
+.viewAllLikers {
+  grid-area: viewAllLikers;
+  align-self: start;
+  justify-self: right;
 }
 
 .likers {
   grid-area: likesImages;
+}
+
+/* ====================================== Reposts Section ==================================== */
+
+.repostersGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 50px 50px 18px;
+  grid-template-areas:
+  "repostsHeader repostsHeader viewAllReposters"
+  "repostsImages repostsImages repostsImages"
+  ". . .";
+}
+
+.repostsHeader {
+  grid-area: repostsHeader;
+}
+
+.viewAllReposters {
+  grid-area: viewAllReposters;
+  justify-self: right;
 }
 
 .reposters {
