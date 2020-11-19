@@ -69,7 +69,7 @@ class RelatedTracks extends React.Component {
           <h4 className={"viewAllRelated"}>View All</h4>
         </div>
         <HighlightedTracks highlights={this.state.highlights} />
-        <RelatedTracksModal songs={this.state.songs} show={this.state.showModal} />
+        <RelatedTracksModal songs={this.state.songs} show={this.state.showModal} click={this.toggleModal} />
       </div>
     )
   }

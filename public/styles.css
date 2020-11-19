@@ -126,7 +126,7 @@ h4:hover {
 
 .songStats {
   font-family: "Open Sans", sans-serif;
-  font-size: 10.5px;
+  font-size: 10px;
   color: #999;
 }
 
@@ -200,4 +200,48 @@ h4:hover {
 
 .reposters {
   grid-area: repostsImages;
+}
+
+/* ====================================== Related Tracks Popup Modal =============================== */
+
+.modal {
+  display: inline-block;
+  left: 50%;
+  right: 50%;
+  top: 10%;
+  position: fixed;
+  width: 350px;
+  height: 100%;
+  z-index: 100;
+  box-shadow: 5px 5px 5px 5px #999;
+  justify-content: center;
+  background-image: linear-gradient(to right, rgb(226, 199, 252), rgb(255, 109, 109));
+  transition: 0.5s;
+}
+
+.relatedHeaderModal {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr 1fr;
+  grid-template-rows: 40px;
+  grid-template-areas: ". related viewAllRelated .";
+  align-items: end;
+}
+
+.songGridModal {
+  display: grid;
+  width: 300px;
+  left: 50%;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 18px 18px 18px 18px;
+  column-gap: 10px;
+  grid-template-areas:
+  ". picture artist artist artist artist artist"
+  ". picture title title title title title"
+  ". picture plays likes reposts comments ."
+  ". . . . . . .";
+}
+
+.close {
+  background-color: white;
+
 }

@@ -20,7 +20,7 @@ function RelatedTracksModal(props) {
     const reposts = addK(song.reposts);
     const comments = addK(song.comments);
     showTen.push(
-      <div className={"songGrid"}>
+      <div className={"songGridModal"}>
         <div className={"behindPic"}></div>
         <div className={"behindPicOne"}></div>
         <img src={"https://fec-tyrell-users.s3.us-east-2.amazonaws.com/Snapchat-7841306265423801048.jpg"}
@@ -40,7 +40,13 @@ function RelatedTracksModal(props) {
 
   if (props.show) {
     return (
-      <div>{showTen}</div>
+      <div className={"modal"}>
+        <div className={"relatedHeaderModal"} >
+          <h4 className={"related"}><i class="fas fa-music"></i> Related Tracks</h4>
+          <h4 className={"viewAllRelated close"} onClick={props.click}>Close</h4>
+        </div>
+        <div>{showTen}</div>
+      </div>
     )
   } else {
     return null;
