@@ -29,7 +29,7 @@ function TopLikes(props) {
   }
   return (
     <div className={"likersGrid"}>
-      <h4 className={"likesHeader"}>XXXX Likes</h4>
+      <h4 className={"likesHeader"}><i class="fas fa-heart"></i> Likes</h4>
       <h4 className={"viewAllLikers"}>View All</h4>
       <div className={"likers"}>{topNine}</div>
   </div>

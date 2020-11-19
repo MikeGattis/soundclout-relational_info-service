@@ -8,6 +8,11 @@ h4 {
   border-bottom: 1px solid #999;
   font: 12px Lucida Grande, Lucida Sans Unicode, Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
   color: #999;
+  cursor: pointer;
+}
+
+h4:hover {
+  color: black;
 }
 
 /* ========================================== Related Tracks Sections ===================================== */
@@ -48,6 +53,12 @@ h4 {
   grid-area: picture;
   align-self: center;
   z-index: 2;
+  cursor: pointer;
+}
+
+.songImg:hover {
+  width: 60px;
+  height: 60px;
 }
 
 .behindPic {
@@ -76,6 +87,11 @@ h4 {
   font-family: Lucida Grande, Lucida Sans Unicode, Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
   color: #999;
   font-size: 14px;
+  cursor: pointer;
+}
+
+.artist:hover {
+  color: black;
 }
 
 .songTitle {
@@ -85,29 +101,36 @@ h4 {
   text-overflow: ellipsis;
   font-family: Lucida Grande, Lucida Sans Unicode, Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
   font-size: 14px;
+  cursor: pointer;
 }
 
 .statsPlays {
   grid-area: plays;
+  justify-self: center;
 }
 
 .statsLikes {
   grid-area: likes;
+  justify-self: center;
 }
 
 .statsReposts {
   grid-area: reposts;
+  justify-self: center;
 }
 
 .statsComments {
   grid-area: comments;
+  justify-self: center;
 }
 
 .songStats {
   font-family: "Open Sans", sans-serif;
-  font-size: 11px;
+  font-size: 10.5px;
   color: #999;
 }
+
+/* ==================================== User Images ======================================= */
 
 .userImg {
   width: 35px;
@@ -116,6 +139,12 @@ h4 {
   border-color: white;
   border-style: solid;
   border-width: 2px;
+  cursor: pointer;
+}
+
+.userImg:hover {
+  width: 40px;
+  height: 40px;
 }
 
 /* ====================================== Likes Section ==================================== */

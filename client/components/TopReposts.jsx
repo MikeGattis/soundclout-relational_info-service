@@ -26,7 +26,7 @@ function TopReposts(props) {
   }
   return (
     <div className={"repostersGrid"}>
-      <h4 className={"repostsHeader"}>XXXX Reposts</h4>
+      <h4 className={"repostsHeader"}><i class="fas fa-retweet"></i> Reposts</h4>
       <h4 className={"viewAllReposters"}>View All</h4>
       <div className={"reposters"}>{topNine}</div>
     </div>

@@ -9,11 +9,13 @@ class RelatedTracks extends React.Component {
     super(props);
     this.state = {
       songs: [],
+      showModal: false,
       genre: 'North',
       highlights: []
     }
     this.getSongs = this.getSongs.bind(this);
     this.generateRelatedSongs = this.generateRelatedSongs.bind(this);
+    this.toggleModal = this.toggleModal.bind(this);
   }
 
   componentDidMount() {
@@ -51,10 +53,24 @@ class RelatedTracks extends React.Component {
     this.setState({highlights: showThree});
   }
 
+  toggleModal() {
+    if (this.state.showModal) {
+      this.setState({showModal: false});
+    } else {
+      this.setState({showModal: true});
+    }
+  }
 
   render() {
     return (
-      <HighlightedTracks highlights={this.state.highlights} />
+      <div>
+        <div className={"relatedHeader"} onClick={this.toggleModal}>
+          <h4 className={"related"}><i class="fas fa-music"></i> Related Tracks</h4>
+          <h4 className={"viewAllRelated"}>View All</h4>
+        </div>
+        <HighlightedTracks highlights={this.state.highlights} />
+        <RelatedTracksModal songs={this.state.songs} show={this.state.showModal} />
+      </div>
     )
   }
 }
