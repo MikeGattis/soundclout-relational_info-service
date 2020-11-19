@@ -1,34 +1,27 @@
 #app {
   position: relative;
-  display: grid;
+  display: flex;
   width: 300px;
-  /* grid-template-columns: 1fr;
-  grid-template-rows:  100px 80px 80px 80px 100px 80px 100px 80px;
-  grid-template-areas:
-  "songGrid"
-  "songGrid"
-  "songGrid"
-  "songGrid"
-  "userGrid"
-  "userGrid"
-  "userGrid"
-  "userGrid"; */
 }
 
+h4 {
+  border-bottom: 1px solid #999;
+  font: 12px Lucida Grande, Lucida Sans Unicode, Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
+  color: #999;
+}
 
 /* ========================================== Related Tracks Sections ===================================== */
 
 .relatedHeader {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  grid-template-rows: 30px;
+  grid-template-rows: 40px;
   grid-template-areas: "related viewAllRelated";
-  align-items: center;
+  align-items: end;
 }
 
 .related {
   grid-area: related;
-
 }
 
 .viewAllRelated {
@@ -41,6 +34,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 18px 18px 18px 18px;
+  column-gap: 10px;
   grid-template-areas:
   "picture artist artist artist artist artist"
   "picture title title title title title"
@@ -53,6 +47,28 @@
   height: 50px;
   grid-area: picture;
   align-self: center;
+  z-index: 2;
+}
+
+.behindPic {
+  width: 50px;
+  height: 50px;
+  background-color: #999;
+  grid-area: picture;
+  align-self: center;
+  transform: rotateZ(10deg);
+  opacity: 0.3;
+  z-index: 1;
+}
+
+.behindPicOne {
+  width: 50px;
+  height: 50px;
+  background-color: #999;
+  grid-area: picture;
+  align-self: center;
+  transform: rotateZ(80deg);
+  opacity: 0.3;
 }
 
 .artist {
@@ -107,8 +123,9 @@
 .likersGrid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 50px 50px 18px;
+  grid-template-rows: 10px 40px 40px 15px;
   grid-template-areas:
+  ". . ."
   "likesHeader likesHeader viewAllLikers"
   "likesImages likesImages likesImages"
   ". . .";
@@ -116,12 +133,12 @@
 
 .likesHeader {
   grid-area: likesHeader;
-  align-self: start;
+  align-self: end;
 }
 
 .viewAllLikers {
   grid-area: viewAllLikers;
-  align-self: start;
+  align-self: end;
   justify-self: right;
 }
 
@@ -134,7 +151,7 @@
 .repostersGrid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 50px 50px 18px;
+  grid-template-rows: 40px 50px 10px;
   grid-template-areas:
   "repostsHeader repostsHeader viewAllReposters"
   "repostsImages repostsImages repostsImages"
@@ -143,11 +160,13 @@
 
 .repostsHeader {
   grid-area: repostsHeader;
+  align-self: end;
 }
 
 .viewAllReposters {
   grid-area: viewAllReposters;
   justify-self: right;
+  align-self: end;
 }
 
 .reposters {

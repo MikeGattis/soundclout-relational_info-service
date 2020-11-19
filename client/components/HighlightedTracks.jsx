@@ -18,6 +18,8 @@ function HighlightedTracks(props) {
     const comments = addK(song.comments);
     topThree.push(
       <div className={"songGrid"}>
+        <div className={"behindPic"}></div>
+        <div className={"behindPicOne"}></div>
         <img src={"https://fec-tyrell-users.s3.us-east-2.amazonaws.com/Snapchat-7841306265423801048.jpg"}
           className={"songImg"} />
           {/* {song.artist_image_url} */}
