@@ -6,7 +6,7 @@
 
 h4 {
   border-bottom: 1px solid #999;
-  font: 12px Lucida Grande, Lucida Sans Unicode, Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
+  font: 12px Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
   color: #999;
   cursor: pointer;
 }
@@ -84,7 +84,7 @@ h4:hover {
 
 .artist {
   grid-area: artist;
-  font-family: Lucida Grande, Lucida Sans Unicode, Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
+  font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
   color: #999;
   font-size: 14px;
   cursor: pointer;
@@ -99,7 +99,7 @@ h4:hover {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-family: Lucida Grande, Lucida Sans Unicode, Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
+  font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
   font-size: 14px;
   cursor: pointer;
 }
@@ -125,7 +125,7 @@ h4:hover {
 }
 
 .songStats {
-  font-family: "Open Sans", sans-serif;
+  font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
   font-size: 10px;
   color: #999;
 }
@@ -242,4 +242,36 @@ h4:hover {
 
 .close:hover {
   background-color: white;
+}
+
+/* Fonts */
+@font-face {
+  font-family: Interstate;
+  src: url('../assets/fonts/Interstate/interstate.ttf');
+  font-weight: 400;
+}
+@font-face {
+  font-family: Interstate;
+  src: url('../fonts/Interstate/interstate-bold.ttf');
+  font-weight: 500;
+}
+@font-face {
+  font-family: Interstate;
+  src: url('../assets/fonts/Interstate/interstate-light.ttf');
+  font-weight: 300;
+}
+@font-face {
+  font-family: Interstate;
+  src: url('../assets/fonts/Interstate/interstate-extralight.ttf');
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Lucida Grande";
+  src: url('../assets/fonts/Lucida\ Grande/LucidaGrande.ttf');
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Lucida Grande";
+  src: url('../assets/fonts/Lucida\ Grande/LucidaGrandeBold.ttf');
+  font-weight: 500;
 }
