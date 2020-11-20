@@ -215,8 +215,7 @@ h4:hover {
   z-index: 100;
   box-shadow: 5px 5px 5px 5px #999;
   justify-content: center;
-  background-image: linear-gradient(to right, rgb(226, 199, 252), rgb(255, 109, 109));
-  transition: 0.5s;
+  background-image: linear-gradient(to right, rgb(226, 199, 252, 0.8), rgb(255, 109, 109, 0.5), rgb(226, 199, 252, 0.5));
 }
 
 .relatedHeaderModal {
@@ -241,7 +240,6 @@ h4:hover {
   ". . . . . . .";
 }
 
-.close {
+.close:hover {
   background-color: white;
-
 }

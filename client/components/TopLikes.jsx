@@ -18,12 +18,11 @@ function TopLikes(props) {
     if (topNine.length === 9) {
       break;
     }
-
     pixels += 31;
+    var test = props.highlightUser(user, pixels);
     topNine.push(
-      <div style={styleDiv} >
+      <div style={styleDiv}>
         <img src={user.user_image_url} className={"userImg"} />
-        {/* <div>{user.user}</div> */}
       </div>
     );
   }

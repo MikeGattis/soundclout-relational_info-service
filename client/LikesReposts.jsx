@@ -17,6 +17,7 @@ class LikesReposts extends React.Component {
     this.getUsers = this.getUsers.bind(this);
     this.findLikers = this.findLikers.bind(this);
     this.findReposters = this.findReposters.bind(this);
+    this.highlightUser = this.highlightUser.bind(this);
   }
 
   componentDidMount() {
@@ -66,10 +67,26 @@ class LikesReposts extends React.Component {
     this.setState({reposters: reposts});
   }
 
+  highlightUser(user, pixels) {
+    var modalStyle = {
+      width: "100px",
+      height: "100px",
+      left: pixels + "px",
+      backgroundColor: "gray",
+      position: "inline-block"
+    }
+    return (
+    <div style={modalStyle}>
+      <img src={user.user_image_url} className={"userImg"} />
+        <h4>{user.user}</h4>
+    </div>
+    )
+  }
+
   render() {
     return (
       <div>
-        <TopLikes users={this.state.likers} />
+        <TopLikes users={this.state.likers} highlightUser={this.highlightUser} />
         <TopReposts users={this.state.reposters} />
       </div>
     )

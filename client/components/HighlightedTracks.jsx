@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 
 function HighlightedTracks(props) {
   const highlights = props.highlights;
-  console.log('highlights: ', highlights);
   const topThree = [];
 
   const addK = function(stat) {
@@ -25,8 +24,6 @@ function HighlightedTracks(props) {
         <div className={"behindPicOne"}></div>
         <img src={"https://fec-tyrell-users.s3.us-east-2.amazonaws.com/Snapchat-7841306265423801048.jpg"}
           className={"songImg"} />
-          {/* {song.artist_image_url} */}
-
         <div className={"songTitle"}>{song.title}</div>
         <div className={"artist"}>{song.artist}</div>
         <div className={"statsPlays songStats"}><i class="fas fa-play"></i>{plays}</div>
